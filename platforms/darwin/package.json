@@ -1,6 +1,6 @@
 {
   "name": "@cpplint/cpplint-cpp-darwin",
-  "version": "0.0.1-rc.1",
+  "version": "0.0.1-rc.2",
   "description": "Prebuilt cpplint-cpp for use with macOS",
   "author": "Lovell Fuller <npm@lovell.info>",
   "repository": {
