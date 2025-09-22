@@ -1,0 +1,12 @@
+{
+  "name": "@cpplint/workspaces",
+  "version": "0.0.1-rc.0",
+  "private": "true",
+  "workspaces": [
+    "darwin",
+    "linux-arm64",
+    "linux-x64",
+    "win32-arm64",
+    "win32-x64"
+  ]
+}
