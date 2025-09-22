@@ -1,6 +1,6 @@
 {
   "name": "@cpplint/cpplint-cpp-linux-x64",
-  "version": "0.0.1-rc.0",
+  "version": "0.0.1-rc.1",
   "description": "Prebuilt cpplint-cpp for use with Linux x64",
   "author": "Lovell Fuller <npm@lovell.info>",
   "repository": {
