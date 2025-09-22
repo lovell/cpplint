@@ -1,0 +1,28 @@
+{
+  "name": "@cpplint/cpplint-cpp-darwin",
+  "version": "0.0.1-rc.0",
+  "description": "Prebuilt cpplint-cpp for use with macOS",
+  "author": "Lovell Fuller <npm@lovell.info>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lovell/cpplint.git",
+    "directory": "npm/darwin"
+  },
+  "license": "BSD-3-Clause",
+  "preferUnplugged": true,
+  "files": [
+    "bin",
+    "index.cjs"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "commonjs",
+  "exports": "./index.cjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "os": [
+    "darwin"
+  ]
+}

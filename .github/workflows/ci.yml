@@ -1,0 +1,33 @@
+name: CI
+on:
+  - push
+  - pull_request
+permissions: {}
+jobs:
+  test:
+    permissions:
+      contents: read
+    runs-on: 'ubuntu-24.04'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '18'
+      - run: npm install
+      - run: npm test
+  publish-platform-packages:
+    needs: test
+    permissions:
+      contents: read
+      id-token: write
+    runs-on: 'ubuntu-24.04'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - working-directory: platforms
+        run: ./populate.sh
+      - if: startsWith(github.ref, 'refs/tags/v')
+        working-directory: platforms
+        run: npm publish --workspaces --tag=${{ contains(github.ref, '-rc') && 'rc' || 'latest' }}
